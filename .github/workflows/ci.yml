@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker build -t builtDocker; docker run builtDocker
+      - run: docker run -it $(docker build -q .)
