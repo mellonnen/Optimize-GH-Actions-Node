@@ -2,9 +2,9 @@ name: CI docker
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
   workflow_dispatch:
 
@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker build .; docker run
+      - run: docker build -t builtDocker; docker run builtDocker
