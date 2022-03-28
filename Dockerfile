@@ -1,5 +1,6 @@
 FROM node:16-alpine
 
-COPY entrypoint.sh /entrypoint.sh
+COPY package.json .
+COPY yarn.lock .
 
 ENTRYPOINT ["/entrypoint.sh"]
