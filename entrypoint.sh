@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
 yarn install
-yarn test
+yarn run test
